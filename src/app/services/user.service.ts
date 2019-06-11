@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from '../models/user';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Injectable({
@@ -7,20 +9,19 @@ import { User } from '../models/user';
 })
 export class UserService {
 
-  users: Array<User>;
+  // users: Array<User>;
 
-  constructor() {
-    this.users = [
-      {
-        name: 'Eric',
-        lastName: 'Zhao',
-        email: 'ez.zhao@mail.utoronto.ca',
-        cellPhone: 6473301891
-      }
-    ];
-  }
+  constructor(
+    private httpClient: HttpClient
+  ) {}
 
-  getUsers(): Array<User> {
-    return this.users;
+  // getUsers(): Array<User> {
+  //   return this.users;
+  // }
+
+  getAllUsers(assign: Function) {
+    this.httpClient.get('http://localhost:3000/api/users/').subscribe((response: Array<User>) => {
+      assign(response);
+    });
   }
 }

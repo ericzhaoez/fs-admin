@@ -10,16 +10,20 @@ export class DashBoardComponent implements OnInit {
 
   navItems: Array<any> = [
     {
-      name: 'Home',
-      rout: '/home'
-    },
-    {
       name: 'Users',
       rout: '/users'
     },
     {
-      name: 'Service Providers',
-      rout: '/service-providers'
+      name: 'Properties',
+      rout: '/properties'
+    },
+    {
+      name: 'Providers',
+      rout: '/providers'
+    },
+    {
+      name: 'Bookings',
+      rout: '/bookings'
     }
   ]
 

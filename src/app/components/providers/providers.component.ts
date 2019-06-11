@@ -3,11 +3,11 @@ import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss']
+  selector: 'app-providers',
+  templateUrl: './providers.component.html',
+  styleUrls: ['./providers.component.scss']
 })
-export class UsersComponent implements OnInit {
+export class ProvidersComponent implements OnInit {
 
   // users: Array<any>;
   public users: Array<User> = new Array();
